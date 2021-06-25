@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bios",
+  "info": {
+    "name": "bio",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "email": {
+      "type": "email"
+    },
+    "profileImg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "tattoos": {
+      "via": "bios",
+      "collection": "tattoo"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catagories",
+  "info": {
+    "name": "catagory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tattoos": {
+      "via": "catagories",
+      "collection": "tattoo",
+      "dominant": true
+    }
+  }
+}

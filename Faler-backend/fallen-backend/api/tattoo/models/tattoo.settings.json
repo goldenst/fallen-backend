@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tattoos",
+  "info": {
+    "name": "tattoo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "catagories": {
+      "via": "tattoos",
+      "collection": "catagory"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "bios": {
+      "collection": "bio",
+      "via": "tattoos",
+      "dominant": true
+    },
+    "artist": {
+      "type": "string"
+    }
+  }
+}

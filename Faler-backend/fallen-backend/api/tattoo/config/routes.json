@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tattoos",
+      "handler": "tattoo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tattoos/count",
+      "handler": "tattoo.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tattoos/:id",
+      "handler": "tattoo.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tattoos",
+      "handler": "tattoo.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tattoos/:id",
+      "handler": "tattoo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tattoos/:id",
+      "handler": "tattoo.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
